@@ -1,6 +1,6 @@
 package types.interfaces
 
-abstract class JsonTrait[T]( value: T ) {
+abstract class JsonTrait {
 
   /**
     * Function that turns the json object into a JsonString
@@ -9,11 +9,6 @@ abstract class JsonTrait[T]( value: T ) {
     * */
   def toJsonString: String
 
-  /**
-    * Returns the Main value of a json type
-    *
-    * @return T
-    * */
-  def getValue: T = this.value
+  protected def getKey: String = null
 
 }

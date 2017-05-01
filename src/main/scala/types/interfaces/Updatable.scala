@@ -5,6 +5,11 @@ package types.interfaces
   */
 trait Updatable {
 
-
+  /**
+    * Updates the value from a updatable json object
+    *
+    * @param value: T
+    * */
+  def updateValue( key: String, value: JsonTrait ): Unit
 
 }

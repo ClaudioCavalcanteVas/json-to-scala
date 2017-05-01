@@ -5,4 +5,15 @@ package types.interfaces
   */
 trait Searchable {
 
+  def findByKey[A]( key: String ): JsonTrait
+
+  /**
+    * Checks if the key exists
+    *
+    * @param key: String
+    *
+    * @return Boolean
+    * */
+  def contains( key: String ): Boolean
+
 }

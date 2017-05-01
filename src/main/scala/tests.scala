@@ -23,4 +23,24 @@ object tests extends App{
   println( node.toJsonString )
   println( arrNode.toJsonString )
 
+  val json = new JsonObject
+
+  json.addNode(node)
+
+  json.add("Boolean", true)
+
+  json.add("Int", 5)
+
+  json.addNode( arrNode )
+
+  println( json.toJsonString )
+
+  val otherJson = new JsonObject
+
+  val treeNode = new Node( "GOD LIKE", json )
+
+  otherJson.addNode( treeNode )
+
+  println( otherJson.toJsonString )
+
 }
